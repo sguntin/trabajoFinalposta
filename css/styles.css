@@ -26,6 +26,12 @@ header article img{
     width: 60px;
     border-radius: 25%;
 }
+main section article img{
+    border-radius: 35%;
+}
+main section{
+    align-items: center;
+}
 main section ul{
     list-style: none;
 }
