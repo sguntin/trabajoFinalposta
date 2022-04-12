@@ -26,3 +26,15 @@ header article img{
     width: 60px;
     border-radius: 25%;
 }
+main section ul{
+    list-style: none;
+}
+main section ul li{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    margin: 10px 0;  
+}
+main section ul li img{
+    width: 40px;
+}
