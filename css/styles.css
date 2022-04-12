@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header,main,header ul{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+main article{
+    width: 30vw;    
+}
+
+main article img {
+    max-width: 100%;
+
+}
+header article{
+    width: 25vw;
+}
+header ul{
+    width: 70vw;
+}
+header article img{
+    width: 60px;
+    border-radius: 25%;
+}
