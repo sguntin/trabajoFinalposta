@@ -1,5 +1,5 @@
 
-/* I N D E X */
+/* I N D E X y S E A R C H  R E S U L T S */
 *{
     margin: 0;
     padding: 0;
@@ -30,9 +30,11 @@ header article img{
 }
 main section article img{
     border-radius: 35%;
+    width:15vw;
 }
 main section{
     align-items: center;
+    flex-wrap: wrap;
 }
 main section ul{
     list-style: none;
@@ -46,6 +48,9 @@ main section ul li{
 main section ul li img{
     width: 40px;
 }
-
+main section section{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 /* P L A Y L I S T*/
 
