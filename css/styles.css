@@ -60,7 +60,7 @@ main section section{
 .tituloprincipal{
     font-family: 'Barlow', sans-serif;
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
 }
 .favoritas ul{
     display: flex;
@@ -86,5 +86,40 @@ main section section{
     margin-left: 20px;
 }
 
+/*G E N R E S*/
 
+.contenidogenres ul li img{
+    width: 350px;
+    height: 350px;
+    border-radius: 4%;
+}
+.contenidogenres ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+.contenidogenres ul li{
+    font-family: 'Barlow', sans-serif;
+    list-style: none;
+    margin: 30px;
+    padding: 40px;
+}
 
+.txtgenres{
+    background-color: rgb(47, 47, 47);
+    color: white;
+    text-align: center;
+    width: 350px;
+    font-size: 20px;
+}
+.contenidogenres{
+    align-items: center;
+}
+.contenidogenres ul li p{
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif ;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    text-align: center;
+    width:100%;
+    
+}
