@@ -165,12 +165,24 @@ main article p{
     text-align: justify;
     font-family: 'Barlow', sans-serif ;
 }
-/* D E T A I L  A R T I S T*/
-.infoartista h1
-{
-    text-align: center;
+.infoalbum ol {
     font-family: 'Barlow', sans-serif ;
 }
+
+/* D E T A I L  A R T I S T*/
+
+.infoartista h1 
+{
+ text-align: center;
+font-family: 'Barlow', sans-serif ;
+ }
+
+ .infoartista ol
+ {
+    text-align:justify ;
+font-family: 'Barlow', sans-serif ; 
+ }
+
 /* D E T A I L  T R A C K*/
 
 .infocancion h1 {text-align: center;
@@ -179,4 +191,7 @@ main article p{
 }
 .infocancion h2 { text-align: center;
     font-family: 'Barlow', sans-serif ;
+}
+main {
+    background-color: tomato;
 }
