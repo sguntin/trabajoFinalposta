@@ -143,3 +143,26 @@ main article p{
     font-size: 20px;
     text-align: center;
 }
+/* D E T A I L  A L B U M*/
+
+.infoalbum h1 
+{
+    text-align: center;
+}
+.infoalbum h2
+{
+    text-align: center;
+}
+.infoalbum h3 {
+    text-align: center;
+}
+.infoalbum h4
+{
+    text-align: justify;
+}
+/* D E T A I L  A R T I S T*/
+.infoartista h1
+{
+    text-align: center;
+}
+/* D E T A I L  T R A C K*/
