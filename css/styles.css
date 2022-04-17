@@ -131,6 +131,7 @@ main article {
 }
 main article img {
     height: 300px;
+    width: 300px;
 }
 main article h1{
     background-color: grey;
