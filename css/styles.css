@@ -131,6 +131,7 @@ main article {
 }
 main article img {
     height: 300px;
+    width: 300px;
 }
 main article h1{
     background-color: grey;
@@ -148,21 +149,49 @@ main article p{
 .infoalbum h1 
 {
     text-align: center;
+    font-family: 'Barlow', sans-serif ;
 }
 .infoalbum h2
 {
     text-align: center;
+    font-family: 'Barlow', sans-serif ;
 }
 .infoalbum h3 {
     text-align: center;
+    font-family: 'Barlow', sans-serif ;
 }
 .infoalbum h4
 {
     text-align: justify;
+    font-family: 'Barlow', sans-serif ;
 }
+.infoalbum ol {
+    font-family: 'Barlow', sans-serif ;
+}
+
 /* D E T A I L  A R T I S T*/
-.infoartista h1
+
+.infoartista h1 
 {
-    text-align: center;
-}
+ text-align: center;
+font-family: 'Barlow', sans-serif ;
+ }
+
+ .infoartista ol
+ {
+    text-align:justify ;
+font-family: 'Barlow', sans-serif ; 
+ }
+
 /* D E T A I L  T R A C K*/
+
+.infocancion h1 {text-align: center;
+    font-family: 'Barlow', sans-serif ;
+
+}
+.infocancion h2 { text-align: center;
+    font-family: 'Barlow', sans-serif ;
+}
+main {
+    background-color: tomato;
+}
