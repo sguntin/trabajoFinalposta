@@ -2,28 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
 
 /* I N D E X y S E A R C H  R E S U L T S */
+/*general*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/*header*/
 header,main,header ul{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.index{
-    width: 30vw;  
-}
 header{
     background-color: plum;
-}
-main article img {
-    max-width: 100%;
-
-}
-main{
-    padding-bottom: 90px;
 }
 header article{
     width: 25vw;
@@ -40,6 +32,21 @@ header ul li a{
 header article img{
     width: 60px;
     border-radius: 25%;
+}
+/*canciones*/
+.index{
+    width: 30vw;  
+}
+.index h1{
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+}
+main article img {
+    max-width: 100%;
+
+}
+main{
+    padding-bottom: 90px;
 }
 .img article img{
     border-radius: 35%;
@@ -86,10 +93,7 @@ footer p{
     text-decoration: none;
     color: black;
 }
-.index h1{
-    font-family: 'Barlow', sans-serif;
-    text-align: center;
-}
+
 /* P L A Y L I S T*/
 
 .tituloprincipal{
