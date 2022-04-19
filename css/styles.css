@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
 
 /* I N D E X y S E A R C H  R E S U L T S */
-/*general*/
+/*general, selector universal*/
 *{
     margin: 0;
     padding: 0;
@@ -65,7 +65,7 @@ main{
     justify-content: space-around;
 
 }
-main ul{
+main section ul{
     list-style: none;
     margin-top: 30px;
 }
