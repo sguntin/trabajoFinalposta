@@ -64,7 +64,7 @@ main section section{
 }
 .favoritas ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: row wrap;
 }
 .favoritas ul li{
     list-style: none;
@@ -76,6 +76,7 @@ main section section{
     margin-left: 20px;
     margin-top: 50px;
     border-radius: 2%;
+    width:480px;
 }
 .favoritas ul li p{
     background-color: rgb(47, 47, 47);
