@@ -103,7 +103,7 @@ footer p{
 }
 .favoritas ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: row wrap;
 }
 .favoritas ul li{
     list-style: none;
@@ -115,6 +115,7 @@ footer p{
     margin-left: 20px;
     margin-top: 50px;
     border-radius: 2%;
+    width:480px;
 }
 .favoritas ul li p{
     background-color: rgb(47, 47, 47);
@@ -163,23 +164,23 @@ footer p{
     
 }
 /* D E T A I L   G E N R E S*/
-main article {
+.maindg article {
     width: 300px;
     height: 300px;
     margin-top: 150px;
 }
-main article img {
+.maindg article img {
     height: 300px;
     width: 300px;
 }
-main article h1{
+.maindg article h1{
     background-color: grey;
     font-size: 25px;
     font-family:  'Barlow', sans-serif ;
     text-align: center;
     color: white;
 }
-main article p{
+.maindg article p{
     font-size: 20px;
     text-align: center;
 }
