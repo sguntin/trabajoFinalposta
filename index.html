@@ -19,14 +19,16 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="playlist.html">Playlist</a></li>
             <li><a href="genres.html">Genres</a></li>
-            <form action="search-results.html">
-                <input type="search" name="search music" placeholder="search">
+            <form action="search-results.html" method="get">
+                <input type="search" name="search-music" placeholder="search" >
                 <button>&#128269;</button>
             </form>
         </ul>
     </header>
     <main> <!-- caja padre main, caja hijo article, class index es la clase comun a todas las cajas-->
-        <article class="index the-man">
+      <section class="canciones">
+      </section>  
+         <article class="index the-man">
             <img src="./img/taylor swift.webp" alt="">
             <a href="./detail-track.html"><h1>The man- Taylor Swift</h1></a>
             <p>"I am so sick of running as fast as I can"</p>
@@ -51,12 +53,12 @@
             <a href="./detail-track.html"><h1>Hp-Maluma</h1></a>
             <p>"Ella quiere un man que no la llame y que no joda"</p>
         </article>
-        <script src="./js/index.js"></script>
+ 
     </main>
     <footer>
         <p>Sofia Guntin - Lorenzo Cozzo - Bianca Pedemonte</p> 
     </footer>
-
+ <script src="./js/index.js"></script>
 </body>
 
 </html>
