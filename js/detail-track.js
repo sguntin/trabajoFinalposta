@@ -1,6 +1,6 @@
-let url = https://developers.deezer.com/api/track 
+let urltrack = https://developers.deezer.com/api/track 
 
-fetch('https://developers.deezer.com/api/track')
+fetch(urltrack)
 .then*=(function(response){
     return response.json();
 })
