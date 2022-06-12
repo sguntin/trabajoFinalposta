@@ -1,37 +1,39 @@
-let busqueda = document.querySelector("form")
-let campoBusqueda = document.querySelector("input")
-
-busqueda.addEventListener("submit", function (e) {
-    e.preventDefault()
-    if (campoBusqueda.value.length >= 3) {
-        this.submit()
-    } else {
-        alert("Minimo 3 caracteres")
-    }
+fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0")
+.then(function(response) {
+    return response.json()
 })
-//hacer un for con un  innerHTML para que esto se vea en pantalla
-//canciones api
-let urlCanciones = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums"
-fetch(urlCanciones)    
-.then(function (response) {
-        return response.json() //json es un objeto
-    })
-    .then(function (data) {
-        console.log(data)
-        let info = data.data
-        let lista = document.querySelector(".canciones")
-        for (let i = 0; i < 4; i++) {
-            let elementosDeLista = ""
-            elementosDeLista += `<article>
-        <img src="${info[i].image}" alt="">
-        <p class="name">Nombre: ${data.data[i].title}</p>
-        <p>Status: $(info[i].status)</p>        
-        <a href="./detail-album.html">ir a detalle</a> 
-        </article>`
-        section[i].innerHTML += elementosDeLista
-    }
-    })
-    .catch(function (error) {
-        console.log(error)
-    })
+.then(function(data) {
+    console.log (data.data)
+    return data })
+    .then (function(data){
+        console.log (data)
+    let ul_canciones = document.querySelector(".ul_canciones")
+    let ul_albumes = document.querySelector(".ul_albumes")
+    let ul_artistas = document.querySelector(".ul_artistas")
 
+    for (let i = 0; i <= 4; i++) {
+
+        ul_canciones.innerHTML += `
+            <li>
+            <img src="${data.tracks.data[i].album.cover_xl}"
+                <a href="detail-track.html?q=${data.tracks.data[i].id}">${data.tracks.data[i].title_short}</a>
+                <a href="detail-artist.html?q=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
+            </li>
+        `
+        ul_albumes.innerHTML += `
+            <li>
+                <img src="${data.tracks.data[i].album.cover_xl}"
+                <a href="detail-album.html?q=${data.tracks.data[i].album.id}">${data.tracks.data[i].album.title}</a>
+                <a href="detail-artist.html?q=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
+            </li>
+        `
+        ul_artistas.innerHTML += `
+            <li>
+                <img src="${data.tracks.data[i].artist.picture_xl}"
+                <a href="detail-artist.html?q=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
+            </li>
+        `
+    }
+
+})
+.catch(function(error) {console.log(error)})
