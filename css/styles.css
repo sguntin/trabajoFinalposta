@@ -37,7 +37,7 @@ header article img{
 .index{
     width: 30vw;  
 }
-.index h1{
+.index h2{
     font-family: 'Barlow', sans-serif;
     text-align: center;
 }
@@ -92,6 +92,18 @@ footer p{
 .img article a, ul li a, .index a {
     text-decoration: none;
     color: black;
+}
+/*NUEVO INDEX*/
+.canciones{
+    display: flex;
+    flex-flow: row wrap;
+}
+.ul_canciones, .ul_albumes, .ul_artistas{
+    max-width: 25%;
+}
+.ul_canciones img, .ul_albumes img, .ul_artistas img{
+    width:25vw;
+    height: auto;
 }
 
 /* P L A Y L I S T*/
