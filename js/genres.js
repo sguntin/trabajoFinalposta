@@ -20,25 +20,17 @@ fetch(url)
       let urlDeImagen = genero.picture_medium;
       let name = genero.name;
 
-      // creo los elementos nuevos
-      let li = document.createElement("li");
-      let imagen = document.createElement("img");
-      let link = document.createElement("a");
-      let texto = document.createElement("h2");
-
-      // les doy las propiedades que necesitan
-      imagen.src = urlDeImagen;
-      texto.innerHTML = name;
-      texto.classList.add("txtgenres");
-      link.href = "detail-genres.html?id=" + genero.id + "&name=" + name;
-
-      // los agrego al li
-      link.appendChild(texto);
-      li.appendChild(imagen);
-      li.appendChild(link);
+      let html = `
+        <li>
+          <img src="${urlDeImagen}" />
+          <a href="detail-genres.html?id=${genero.id}&name=${name}"> 
+            <h2 class="txtgenres">${name}</h2>
+          </a>
+        </li>
+      `;
 
       // los agrego al elemento padre
-      elementoPadre.appendChild(li);
+      elementoPadre.innerHTML += html;
     }
   })
   .catch(function (error) {

@@ -28,24 +28,16 @@ fetch(url)
       let urlDeImagen = artista.picture_medium;
       let name = artista.name;
 
-      // creo los elementos nuevos
-      let articulo = document.createElement("article");
-      let titulo = document.createElement("h1");
-      let imagen = document.createElement("img");
-      let texto = document.createElement("p");
-
-      // les doy las propiedades que necesitan
-      titulo.innerHTML = nombreDeGenero;
-      imagen.src = urlDeImagen;
-      texto.innerHTML = name;
-
-      // los agrego al articulo
-      articulo.appendChild(titulo);
-      articulo.appendChild(imagen);
-      articulo.appendChild(texto);
+      let html = `
+        <article>
+          <h1>${nombreDeGenero}</h1>
+          <img src="${urlDeImagen}" />
+          <p>${name}</p>
+        </article>
+      `;
 
       // los agrego al elemento padre
-      elementoPadre.appendChild(articulo);
+      elementoPadre.innerHTML += html;
     }
   })
   .catch(function (error) {
