@@ -12,7 +12,7 @@ let query = location.search // http://stackoverflow.com/questions?q=algo
 let objetoQuery = new URLSearchParams(query)
 let terminoBuscado = objetoQuery.get('q')
 
-let proxy = "https://api.allorigins.win/raw?url="
+let proxy = " https://cors-anywhere.herokuapp.com/"
 let endpoint = "https://api.deezer.com/search?q="
 
 let url = `${proxy}${endpoint}${terminoBuscado}`

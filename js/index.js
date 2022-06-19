@@ -1,4 +1,4 @@
-fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0")
+fetch(" https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0")
 .then(function(response) {
     return response.json()
 })
