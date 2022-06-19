@@ -244,6 +244,14 @@ font-family: 'Barlow', sans-serif ;
 .infocancion h2 { text-align: center;
     font-family: 'Barlow', sans-serif ;
 }
+.infocancion h3 { text-align: center;
+    font-family: 'Barlow', sans-serif ;
+    color: black;
+}
+.infocancion a { text-align: center;
+    font-family: 'Barlow', sans-serif ;
+    color: black;
+}
 main {
     background-color: tomato;
 }
