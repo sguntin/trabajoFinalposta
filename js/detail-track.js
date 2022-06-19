@@ -3,7 +3,10 @@ let qsToObject = new URLSearchParams(queryString);
 let idCancion = qsToObject.get('id');
 console.log(idCancion);
 
-let urlTrack = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556'
+let proxy = "https://cors-anywhere.herokuapp.com/";
+let endpoint = "https://api.deezer.com/track/3135556";
+
+let urlTrack = `${proxy}${endpoint}`;
 
 fetch(urlTrack)
 .then(function(response){
@@ -15,20 +18,20 @@ fetch(urlTrack)
     let titulo = document.querySelector(".nombrecancion");
     let cantante = document.querySelector(".artistadecancion")
     let album = document.querySelector(".albumdecancion")
+
+
     let urlDeImagen = data.album.cover
 
     titulo.innerHTML= data.title 
     cantante.innerHTML = data.artist.name 
-   
-    
-
-
     album.innerHTML = data.album.title
     
 
     let foto = document.createElement('img')
     foto.src  = urlDeImagen
     document.querySelector('.infocancion').appendChild(foto)
+
+
 })
 
 .catch(function(error){
