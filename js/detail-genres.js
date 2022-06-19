@@ -7,7 +7,10 @@ let idDeGenero = queryStringObj.get("id");
 let nombreDeGenero = queryStringObj.get("name");
 
 // URL de la api de los artistas del genero
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/genre/" + idDeGenero + "/artists";
+let proxy = "https://cors-anywhere.herokuapp.com/";
+let endpoint = "https://api.deezer.com/genre/";
+
+let url = `${proxy}${endpoint}${idDeGenero}/artists`;
 
 // Elemento padre
 let elementoPadre = document.querySelector(".maindg");
@@ -28,24 +31,16 @@ fetch(url)
       let urlDeImagen = artista.picture_medium;
       let name = artista.name;
 
-      // creo los elementos nuevos
-      let articulo = document.createElement("article");
-      let titulo = document.createElement("h1");
-      let imagen = document.createElement("img");
-      let texto = document.createElement("p");
-
-      // les doy las propiedades que necesitan
-      titulo.innerHTML = nombreDeGenero;
-      imagen.src = urlDeImagen;
-      texto.innerHTML = name;
-
-      // los agrego al articulo
-      articulo.appendChild(titulo);
-      articulo.appendChild(imagen);
-      articulo.appendChild(texto);
+      let html = `
+        <article>
+          <h1>${nombreDeGenero}</h1>
+          <img src="${urlDeImagen}" />
+          <p>${name}</p>
+        </article>
+      `;
 
       // los agrego al elemento padre
-      elementoPadre.appendChild(articulo);
+      elementoPadre.innerHTML += html;
     }
   })
   .catch(function (error) {

@@ -3,6 +3,7 @@
 
 /* I N D E X y S E A R C H  R E S U L T S */
 /*general, selector universal*/
+
 *{
     margin: 0;
     padding: 0;
@@ -94,17 +95,28 @@ footer p{
     color: black;
 }
 /*NUEVO INDEX*/
-.canciones{
+.ul_canciones, .ul_albumes, .ul_artistas{
     display: flex;
     flex-flow: row wrap;
+    margin: auto
 }
-.ul_canciones, .ul_albumes, .ul_artistas{
-    max-width: 25%;
+
+.ul_canciones li, .ul_albumes li, .ul_artistas li {
+    width: 33vw;
+    flex-flow: column nowrap;
 }
+
+.ul_canciones li a, .ul_albumes li a, .ul_artistas li a {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
 .ul_canciones img, .ul_albumes img, .ul_artistas img{
     width:25vw;
     height: auto;
 }
+
 
 /* P L A Y L I S T*/
 
