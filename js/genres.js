@@ -1,5 +1,8 @@
 // URL de la api de generos
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/genre";
+let proxy = "https://cors-anywhere.herokuapp.com/";
+let endpoint = "https://api.deezer.com/genre";
+
+let url = `${proxy}${endpoint}`;
 
 // Elemento padre
 let elementoPadre = document.querySelector(".contenidogenres ul");

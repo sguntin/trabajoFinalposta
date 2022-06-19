@@ -7,7 +7,10 @@ let idDeGenero = queryStringObj.get("id");
 let nombreDeGenero = queryStringObj.get("name");
 
 // URL de la api de los artistas del genero
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/genre/" + idDeGenero + "/artists";
+let proxy = "https://cors-anywhere.herokuapp.com/";
+let endpoint = "https://api.deezer.com/genre/";
+
+let url = `${proxy}${endpoint}${idDeGenero}/artists`;
 
 // Elemento padre
 let elementoPadre = document.querySelector(".maindg");
