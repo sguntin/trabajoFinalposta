@@ -30,7 +30,7 @@ fetch(" https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0")
         ul_artistas.innerHTML += `
             <li>
                 <img src="${data.tracks.data[i].artist.picture_xl}"
-                <a href="detail-artist.html?q=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
+                <a href="detail-artist.html?id=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
             </li>
         `
     }

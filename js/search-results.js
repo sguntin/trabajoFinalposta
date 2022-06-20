@@ -42,7 +42,7 @@ fetch(url)
                if (data.data(i)<= terminoBuscado)
                 conResultados.innerHTML += `
                     <article>
-                        <a href="./detail-artist.html?q="${data.data[i].id}>
+                        <a href="./detail-artist.html?id="${data.data[i].id}>
                         <h1>${data.data[i].title_short}</h1>
                         </a>
                         <img src="${data.data[i].album.cover_xl}" alt="" />
@@ -52,7 +52,7 @@ fetch(url)
             for (let i = 0; i < 5; i++) {
                 conResultados.innerHTML += `
                     <article>
-                        <a href="./detail-artist.html?q="${data.data[i].id}>
+                        <a href="./detail-artist.html?id="${data.data[i].id}>
                         <h1>${data.data[i].title_short}</h1>
                         </a>
                         <img src="${data.data[i].album.cover_xl}" alt="" />
