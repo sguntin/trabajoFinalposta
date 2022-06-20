@@ -48,11 +48,8 @@ fetch(url)
                         <img src="${data.data[i].album.cover_xl}" alt="" />
                     </article>
                 `}
-
         } else if (total > 5) {
-            
             for (let i = 0; i < 5; i++) {
-                if (data.data(i)<= terminoBuscado)
                 conResultados.innerHTML += `
                     <article>
                         <a href="./detail-artist.html?q="${data.data[i].id}>
