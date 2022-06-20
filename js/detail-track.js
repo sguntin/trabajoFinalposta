@@ -22,7 +22,7 @@ fetch(urlTrack)
     let album = document.querySelector(".albumdecancion")
     let player = document.querySelector(".player")
 
-    let urlDeImagen = data.album.cover
+    let urlDeImagen = data.album.cover_xl
 
     titulo.innerHTML= data.title 
     cantante.innerHTML = data.artist.name 
