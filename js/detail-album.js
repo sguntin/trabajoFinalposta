@@ -6,7 +6,7 @@ console.log(idAlbum);
 let proxy = "https://cors-anywhere.herokuapp.com/";
 let endpoint = "https://api.deezer.com/album/";
 
-let urlAlbum = `${proxy}${endpoint}${idAlbum}`;
+let urlAlbum = `${proxy}${endpoint}${idAlbum}`; 
 
 fetch(urlAlbum)
 .then(function(response){
