@@ -18,7 +18,7 @@ fetch(`${proxy}${endpoint}${playlist[i]}`)
 })
 .then(function(data){
     console.log(data);
-lista.innerHTML += ` <li><img src="${data.album.cover}" ><p><i class="fa-solid fa-heart-circle-check"></i> <a class="canciondeplaylist" href="./detail-track.html?id=${data.id}"> ${data.title} </a> </p></li>`
+lista.innerHTML += ` <li><img src="${data.album.cover_xl}" ><p><i class="fa-solid fa-heart-circle-check"></i> <a class="canciondeplaylist" href="./detail-track.html?id=${data.id}"> ${data.title} </a> </p></li>`
 
 
 

@@ -24,7 +24,7 @@ fetch(urlAlbum)
 
 
 
-    let urlDeImagen = data.cover
+    let urlDeImagen = data.cover_medium
 
 
     titulo.innerHTML= data.title 
