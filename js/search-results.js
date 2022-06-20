@@ -21,6 +21,7 @@ fetch(url)
     .then(function(response)  {
         return response.json()
     })
+    
     .then(function(data) {
         
         let gif = document.querySelector(".carga-enable")
@@ -37,8 +38,8 @@ fetch(url)
             sinResultados.innerText = "No se encontraron resultados para esta busqueda"
 
         } else if (total > 0 && total < 6) {
-            
             for (let i = 0; i < total; i++) {
+               if (data.data(i)<= terminoBuscado)
                 conResultados.innerHTML += `
                     <article>
                         <a href="./detail-artist.html?q="${data.data[i].id}>
@@ -46,12 +47,12 @@ fetch(url)
                         </a>
                         <img src="${data.data[i].album.cover_xl}" alt="" />
                     </article>
-                `
-            }
+                `}
 
         } else if (total > 5) {
             
             for (let i = 0; i < 5; i++) {
+                if (data.data(i)<= terminoBuscado)
                 conResultados.innerHTML += `
                     <article>
                         <a href="./detail-artist.html?q="${data.data[i].id}>
