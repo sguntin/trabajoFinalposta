@@ -7,6 +7,7 @@ busqueda.addEventListener("submit", function (e) {
     if (campoBusqueda.value.length >= 3) {
         this.submit()
     } else {
-        alert("Minimo 3 caracteres")
+        let mensaje = "Minimo 3 caracteres"
+        alert(mensaje)
     }
 })
