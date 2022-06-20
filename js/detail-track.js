@@ -4,9 +4,9 @@ let idCancion = qsToObject.get('id');
 console.log(idCancion);
 
 let proxy = "https://cors-anywhere.herokuapp.com/";
-let endpoint = "https://api.deezer.com/track/3135556";
+let endpoint = "https://api.deezer.com/track/";
 
-let urlTrack = `${proxy}${endpoint}`;
+let urlTrack = `${proxy}${endpoint}${idCancion}`;
 
 fetch(urlTrack)
 .then(function(response){
@@ -30,6 +30,16 @@ fetch(urlTrack)
     let foto = document.createElement('img')
     foto.src  = urlDeImagen
     document.querySelector('.infocancion').appendChild(foto)
+
+    //guardar a playlist
+
+    let playlist = []
+
+    let recuperoStorage = localStorage.getItem("playlist");
+
+
+
+
 
 
 })
