@@ -54,10 +54,10 @@ fetch(urlTrack)
         //evitar default del link
         evento.preventDefault()
 
-        if(playlist.includes(idGif)){
+        if(playlist.includes(idCancion)){
             //Sacar el id del array
-            let gifASacar = playlist.indexOf(idCancion)
-            playlist.splice(gifASacar, 1);
+            let CancionASacar = playlist.indexOf(idCancion)
+            playlist.splice(CancionASacar, 1);
             link.innerText="Agregar a playlist"
 
         } else {
