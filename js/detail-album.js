@@ -1,6 +1,6 @@
 let queryString = location.search;
 let qsToObject = new URLSearchParams(queryString);
-let idAlbum = 302127;
+let idAlbum = qsToObject.get('id');
 console.log(idAlbum);
 
 let proxy = "https://cors-anywhere.herokuapp.com/";
@@ -30,9 +30,9 @@ fetch(urlAlbum)
     titulo.innerHTML= data.title 
 
     cantante.innerHTML = data.artist.name 
-
+    cantante.href += `?id=${data.artist.id}`
     genero.innerHTML = data.genres.data[0].name
-
+    genero.href += `?id=${data.genres.data[0].id}`
     fecha.innerHTML = data.release_date
 
     let foto = document.createElement('img')
@@ -41,15 +41,12 @@ fetch(urlAlbum)
 
     let tracklist = document.querySelector(".lista");
         let temas = "";
-
+    
         //Los elementos están en un array y para obtenerlos hay recorrerlo.
-        for(let i=0; i<11; i++){
+        for(let i=0; i<data.tracks.data.length; i++){
+            
             //construir un elemento de lista
-            temas = `<article>
-                            <p class="name"> ${data.tracks.data[i].title}</p>
-                            
-                            <a href="detail-track.html?id=${data.tracks.data[i].id}">ir a detalle </a>
-                        </article>`
+            temas += `<article> <a href="detail-track.html?id=${data.tracks.data[i].id}"><p class="name"> ${data.tracks.data[i].title}</p> </a> </article>`
         }
         console.log(temas);
         

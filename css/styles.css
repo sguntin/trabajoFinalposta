@@ -142,8 +142,8 @@ footer p{
     width:480px;
 }
 .favoritas ul li p{
-    background-color: rgb(47, 47, 47);
-    color: white;
+    background-color: rgb(237, 228, 228);
+    color: black;
     text-align: center;
     width: 480px;
     font-size: 20px;
@@ -251,18 +251,21 @@ font-family: 'Barlow', sans-serif ;
 
 .infocancion h1 {text-align: center;
     font-family: 'Barlow', sans-serif ;
-
+background-color: aliceblue;
 }
 .infocancion h2 { text-align: center;
     font-family: 'Barlow', sans-serif ;
+    background-color: aliceblue
 }
 .infocancion h3 { text-align: center;
     font-family: 'Barlow', sans-serif ;
     color: black;
+    background-color: aliceblue
 }
 .infocancion a { text-align: center;
     font-family: 'Barlow', sans-serif ;
     color: black;
+    background-color: aliceblue
 }
 main {
     background-color: tomato;

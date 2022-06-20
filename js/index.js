@@ -16,15 +16,15 @@ fetch(" https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0")
         ul_canciones.innerHTML += `
             <li>
             <img src="${data.tracks.data[i].album.cover_xl}"
-                <a href="detail-track.html?q=${data.tracks.data[i].id}">${data.tracks.data[i].title_short}</a>
-                <a href="detail-artist.html?q=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
+                <a href="detail-track.html?id=${data.tracks.data[i].id}">${data.tracks.data[i].title_short}</a>
+                <a href="detail-artist.html?id=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
             </li>
         `
         ul_albumes.innerHTML += `
             <li>
                 <img src="${data.tracks.data[i].album.cover_xl}"
-                <a href="detail-album.html?q=${data.tracks.data[i].album.id}">${data.tracks.data[i].album.title}</a>
-                <a href="detail-artist.html?q=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
+                <a href="detail-album.html?id=${data.tracks.data[i].album.id}">${data.tracks.data[i].album.title}</a>
+                <a href="detail-artist.html?id=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
             </li>
         `
         ul_artistas.innerHTML += `

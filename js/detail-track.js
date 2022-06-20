@@ -5,8 +5,10 @@ console.log(idCancion);
 
 let proxy = "https://cors-anywhere.herokuapp.com/";
 let endpoint = "https://api.deezer.com/track/";
+let widget = "https://widget.deezer.com/widget/auto/track/";
 
 let urlTrack = `${proxy}${endpoint}${idCancion}`;
+let urlPlayer = `${widget}${idCancion}`;
 
 fetch(urlTrack)
 .then(function(response){
@@ -18,18 +20,21 @@ fetch(urlTrack)
     let titulo = document.querySelector(".nombrecancion");
     let cantante = document.querySelector(".artistadecancion")
     let album = document.querySelector(".albumdecancion")
-
+    let player = document.querySelector(".player")
 
     let urlDeImagen = data.album.cover
 
     titulo.innerHTML= data.title 
     cantante.innerHTML = data.artist.name 
+    cantante.href = "detail-artist.html?id="+data.artist.id
     album.innerHTML = data.album.title
-    
+    album.href = "detail-album.html?id="+data.album.id
+    player.src = urlPlayer
 
-    let foto = document.createElement('img')
+    let foto = document.querySelector('main')
+    foto.style.backgroundImage = `url(${urlDeImagen})`
     foto.src  = urlDeImagen
-    document.querySelector('.infocancion').appendChild(foto)
+    
 
     //guardar a playlist
 
@@ -42,7 +47,7 @@ fetch(urlTrack)
         playlist = playlistToArray
     }
 
-    let link= document.querySelector("a");
+    let link= document.querySelector(".aniadir");
 
     if(playlist.includes(idCancion)){
         //cambiarle el mensaje al usuario.
@@ -79,7 +84,7 @@ fetch(urlTrack)
 
 })
 
+})
 .catch(function(error){
     console.log('el error fue ' + error);
-})
 })
