@@ -55,9 +55,7 @@ fetch(urlTrack)
     }
 
     //Definir un evento para el link
-    link.addEventListener("click", function(evento){
-        //evitar default del link
-        evento.preventDefault()
+    link.addEventListener("click", function(){
 
         if(playlist.includes(idCancion)){
             //Sacar el id del array
@@ -73,8 +71,8 @@ fetch(urlTrack)
         }
     
         //Agregar el array a localStorage. Antes hay que pasarlo a string
-        let gifFavoritosToString = JSON.stringify(playlist);
-        localStorage.setItem('playlist', gifFavoritosToString)
+        let PlaylistToString = JSON.stringify(playlist);
+        localStorage.setItem('playlist', PlaylistToString)
 
 
         console.log(localStorage.getItem("playlist"));

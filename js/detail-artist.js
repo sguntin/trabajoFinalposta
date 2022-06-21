@@ -21,9 +21,9 @@ let urlDeImagen = data.picture
 
 nombre.innerHTML = data.name
 
-let foto = document.createElement('img')
+let foto = document.querySelector('.fotoartista')
     foto.src  = urlDeImagen
-    document.querySelector('.infoartista').appendChild(foto)
+    
 
 fetch(`${proxy}https://api.deezer.com/artist/${idArtista}/albums`)
 .then(function(response){
