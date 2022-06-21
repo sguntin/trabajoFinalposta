@@ -7,6 +7,7 @@
 //+= agregamos cosas
 //$agregas variables
 // let JSON = "An intrinsic object that provides functions to convert JavaScript values to and from the JavaScript Object Notation (JSON) format."
+
 let query = location.search // http://stackoverflow.com/questions?q=algo
 let objetoQuery = new URLSearchParams(query)
 let terminoBuscado = objetoQuery.get('q')
@@ -41,7 +42,7 @@ fetch(url)
                if (data.data(i)<= terminoBuscado)
                 conResultados.innerHTML += `
                     <article>
-                        <a href="./detail-track.html?q=${data.data[i].id}">
+                        <a href="./detail-track.html?id=${data.data[i].id}">
                         <h1>${data.data[i].title_short}</h1>
                         </a>
                         <img src="${data.data[i].album.cover_xl}" alt="" />
@@ -51,7 +52,7 @@ fetch(url)
             for (let i = 0; i < 5; i++) {
                 conResultados.innerHTML += `
                     <article>
-                        <a href="./detail-artist.html?q=${data.data[i].id}">
+                        <a href="./detail-track.html?id=${data.data[i].id}">
                         <h1>${data.data[i].title_short}</h1>
                         </a>
                         <img src="${data.data[i].album.cover_xl}" alt="" />
