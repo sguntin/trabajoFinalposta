@@ -14,24 +14,24 @@ fetch(" https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0")
     for (let i = 0; i <= 4; i++) {
 
         ul_canciones.innerHTML += `
-            <li>
-            <img src="${data.tracks.data[i].album.cover_xl}"
-                <a href="detail-track.html?id=${data.tracks.data[i].id}">${data.tracks.data[i].title_short}</a>
-                <a href="detail-artist.html?id=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
-            </li>
-        `
-        ul_albumes.innerHTML += `
-            <li>
-                <img src="${data.tracks.data[i].album.cover_xl}"
-                <a href="detail-album.html?id=${data.tracks.data[i].album.id}">${data.tracks.data[i].album.title}</a>
-                <a href="detail-artist.html?id=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
-            </li>
-        `
-        ul_artistas.innerHTML += `
-            <li>
-                <img src="${data.tracks.data[i].artist.picture_xl}"
-                <a href="detail-artist.html?id=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
-            </li>
+        <li>
+        <img src="${data.tracks.data[i].album.cover_xl}"
+            <a href="detail-track.html?id=${data.tracks.data[i].id}">${data.tracks.data[i].title_short}</a> 
+            <a href="detail-artist.html?id=${data.tracks.data[i].artist.id}">${data.tracks.data[i].artist.name}</a>
+        </li>
+    `
+    ul_albumes.innerHTML += `
+        <li>
+            <img src="${data.albums.data[i].cover_xl}"
+            <a href="detail-album.html?id=${data.albums.data[i].id}">${data.albums.data[i].title}</a>
+            <a href="detail-artist.html?id=${data.albums.data[i].artist.id}">${data.albums.data[i].artist.name}</a>
+        </li>
+    `
+    ul_artistas.innerHTML += `
+        <li>
+            <img src="${data.artists.data[i].picture_xl}"
+            <a href="detail-artist.html?id=${data.artists.data[i].id}">${data.artists.data[i].name}</a>
+        </li>
         `
     }
 
